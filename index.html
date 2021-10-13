@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>MyBookList App</title>
+</head>
+<body>
+    <div class="container mt-4" >
+        <h1 class="display-4 text-center">
+          Stuff 
+          <span class="text-success">List</span>
+        </h1>
+        <button type="button" class="btn btn-success btn-block " id="openModal" onclick="displayModal()">Add User</button>
+        <div id="id01" class="modal w3-animate-zoom">
+          <div id="alert-container"> </div>
+             <span class="close" title="Close Modal">×</span>
+              <div class="container">
+                <h1 class="display-4 text-center">
+                    Add user to Stuff 
+                    <span class="text-success">List</span>
+                </h1>
+
+                <form id="user-form" class="modal-content">
+                    <div class="form-group">
+                      <label for="firstName">Name</label>
+                      <input type="text" id="firstName" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="lastName">Department</label>
+                      <input type="text" id="lastName" class="form-control" placeholder="Department">
+                    </div>
+                    <div class="form-group">
+                      <label for="salary">Salary</label>
+                      <input type="number" id="salary" class="form-control" placeholder="Salary">
+                    </div>
+                    <div class="form-group">
+                      <label for="position">Position</label>
+                      <select id="position">
+                        <option value="CEO">Front End Dev</option>
+                        <option value="Front">Back End Dev</option>
+                        <option value="QA">Full Stack</option>
+                        <option value="PM">PM</option>
+                        <option value="QA">QA</option>
+                        <option value="PM">CEO</option>
+                        <option value="QA">UI/UX</option>
+                      </select>
+                    </div>
+                    <input type="submit" value="Add User" id="submit" class="btn btn-success btn-lg">
+                </form>
+
+            </div> 
+        </div>
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Department</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>User ID</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody id="user-list"></tbody>
+          </table>
+
+          <table class="table table-striped mt-5" id='stuffInfo'>
+            <tr>
+              <th>Number of Employees</th>
+              <th>Total Salary</th>
+            </tr>
+            <tr>
+              <td id="countWorkers">0</td>
+              <td id="amountSalary">0</td>
+            </tr>
+          </table>
+    </div>    
+    <script src="./JavaScript/script.js"></script>
+</body>
+</html>
